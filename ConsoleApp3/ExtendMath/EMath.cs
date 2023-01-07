@@ -2833,5 +2833,335 @@ namespace ConsoleApp3.ExtendMath
         {
             return (ulong)Math.Round(Math.Pow(1.618, v) / 2.236);
         }
+
+        #region LINEAR_INTERPOLATE
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static byte Lerp(byte a, byte b, double ratio)
+        {
+            return (byte)(a + ratio * (b - a));
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static short Lerp(short a, short b, double ratio)
+        {
+            return (short)(a + ratio * (b - a));
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static ushort Lerp(ushort a, ushort b, double ratio)
+        {
+            return (ushort)(a + ratio * (b - a));
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static int Lerp(int a, int b, double ratio)
+        {
+            return (int)(a + ratio * (b - a));
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static uint Lerp(uint a, uint b, double ratio)
+        {
+            return (uint)(a + ratio * (b - a));
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static long Lerp(long a, long b, double ratio)
+        {
+            return (long)(a + ratio * (b - a));
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static ulong Lerp(ulong a, ulong b, double ratio)
+        {
+            return (ulong)(a + ratio * (b - a));
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static float Lerp(float a, float b, float ratio)
+        {
+            return a + ratio * (b - a);
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static double Lerp(double a, double b, double ratio)
+        {
+            return a + ratio * (b - a);
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static decimal Lerp(decimal a, decimal b, decimal ratio)
+        {
+            return a + ratio * (b - a);
+        }
+        /// <summary>
+        /// Return Linear Interpolate between values
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="ratio"></param>
+        /// <returns></returns>
+        public static double Lerp<T>(T a, T b, double ratio)
+        {
+            dynamic da = a;
+            dynamic db = b;
+            return (double)(da + ratio * (db - da));
+        }
+        #endregion
+
+        #region COVARIANCE
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(byte[] x, byte[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(short[] x, short[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(ushort[] x, ushort[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(int[] x, int[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(uint[] x, uint[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(long[] x, long[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(ulong[] x, ulong[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(float[] x, float[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance(double[] x, double[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static decimal Covariance(decimal[] x, decimal[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            decimal meanX = Mean(x);
+            decimal meanY = Mean(y);
+            decimal sum = 0.0M;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
+        #endregion
+
     }
 }
