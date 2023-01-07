@@ -4,32 +4,6 @@ namespace ConsoleApp3.ExtendMath
 {
     public static class EMath
     {
-        public static float Sin(float deg)
-        {
-            deg %= 90;
-            if(deg<=90)
-            {
-                float ret = deg / 90;
-                float mul;
-                if (deg < 30)
-                {
-                    mul = deg * 0.4f / 30 + 1;
-                    return ret * mul;
-                }
-                else if (deg < 61)
-                {
-                    mul = deg * 0.3f / 135 + 1;
-                    return ret * mul + 0.1f;
-                }
-                else if (deg < 81)
-                {
-                    mul = deg * 0.01f / 135 + 1;
-                    return ret * mul + 0.1f;
-                }
-                return ret;
-            }
-            return 0f;
-        }
         #region REMAP
         /// <summary>
         /// Remap the value from range to another
