@@ -15,15 +15,9 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Console.ReadKey();
-            double [] arr = new double[90];
-            double[] arr2 = new double[100000];
-            float deg = 0.0174532f;
-            arr[0] = 0;
-            for (int i = 0; i < 90;i++,deg += 0.0174532f)
+            for(byte i = 0; i<94;i++)
             {
-                Console.Write(i + ": " + EMath.Sin(i));
-                Console.WriteLine(".  Original = " + Math.Sin(i * Math.PI / 180));
+                Console.WriteLine(EMath.Fibonachi(i));
             }
             Console.ReadKey();
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ConsoleApp3.ExtendMath
 {
@@ -2500,6 +2501,337 @@ namespace ConsoleApp3.ExtendMath
             return tmp[(int)(arr.Length * p)];
         }
         #endregion
+        #region PEARSON_CORRELATION
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(byte[] x, byte[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
 
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(short[] x, short[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(ushort[] x, ushort[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(int[] x, int[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(uint[] x, uint[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(long[] x, long[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(ulong[] x, ulong[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(float[] x, float[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation(double[] x, double[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                double xDiff = x[i] - xMean;
+                double yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static decimal PearsonCorrelation(decimal[] x, decimal[] y)
+        {
+            decimal xMean = Mean(x);
+            decimal yMean = Mean(y);
+            decimal numerator = 0;
+            decimal xDenominator = 0;
+            decimal yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                decimal xDiff = x[i] - xMean;
+                decimal yDiff = y[i] - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / (decimal)Math.Sqrt((double)(xDenominator * yDenominator));
+        }
+        /// <summary>
+        /// Return Pearson Correlation Coefficient between two arrays.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double PearsonCorrelation<T>(T[] x, T[] y)
+        {
+            double xMean = Mean(x);
+            double yMean = Mean(y);
+            double numerator = 0;
+            double xDenominator = 0;
+            double yDenominator = 0;
+
+            for (int i = 0; i < x.Length && i < y.Length; i++)
+            {
+                dynamic v = x[i];
+                double xDiff = v - xMean;
+                v = y[i];
+                double yDiff = v - yMean;
+                numerator += xDiff * yDiff;
+                xDenominator += xDiff * xDiff;
+                yDenominator += yDiff * yDiff;
+            }
+
+            return numerator / Math.Sqrt(xDenominator * yDenominator);
+        }
+        #endregion
+
+        /// <summary>
+        /// Check if number is prime and return the answer.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static bool IsPrime(uint n)
+        {
+            if (n == 1) return false;
+            for(int i = 2; i<n;i++)
+            {
+                if(n % i == 0) return false;
+            }
+            return true;
+        }
+        /// <summary>
+        /// Return the Greatest common divisor.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public static int Gcd(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+
+            return a;
+        }
+        /// <summary>
+        /// Return Least common multiple.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public static int Lcm(int a, int b)
+        {
+            return Math.Abs(a * b) / Gcd(a, b);
+        }
+
+        /// <summary>
+        /// Return fibonachi value of v.
+        /// <para>DONT ENTER NUMBER OVER 94 !!!</para>
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
+        public static ulong Fibonachi(byte v)
+        {
+            return (ulong)Math.Round(Math.Pow(1.618, v) / 2.236);
+        }
     }
 }
