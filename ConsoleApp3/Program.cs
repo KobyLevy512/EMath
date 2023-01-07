@@ -15,10 +15,13 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            for(byte i = 0; i<94;i++)
-            {
-                Console.WriteLine(EMath.Fibonachi(i));
-            }
+            DataTable table = new DataTable();
+            table.AddAttribute("Id");
+            table.AddAttribute("Name");
+            table.AddAttribute("Age");
+            table.AddData(1, "Koby", 28);
+            table.AddData(2, "Moria", 26);
+            Console.WriteLine(table);
             Console.ReadKey();
         }
     }

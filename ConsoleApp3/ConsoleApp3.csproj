@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtendMath\DataTable.cs" />
     <Compile Include="ExtendMath\EMath.cs" />
     <Compile Include="ExtendMath\Plot.cs" />
     <Compile Include="ExtendMath\Vector2f.cs" />

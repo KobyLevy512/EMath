@@ -3177,7 +3177,9 @@ namespace ConsoleApp3.ExtendMath
 
             for (int i = 0; i < n; i++)
             {
-                sum += (x[i] - meanX) * (y[i] - meanY);
+                dynamic dx = x[i];
+                dynamic dy = y[i];
+                sum += (dx - meanX) * (dy - meanY);
             }
             return sum / (n - 1);
         }
