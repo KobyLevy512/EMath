@@ -3161,6 +3161,26 @@ namespace ConsoleApp3.ExtendMath
             }
             return sum / (n - 1);
         }
+        /// <summary>
+        /// Return Covariance value between arrays
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static double Covariance<T>(T[] x, T[] y)
+        {
+            int n = x.Length > y.Length ? y.Length : x.Length;
+
+            double meanX = Mean(x);
+            double meanY = Mean(y);
+            double sum = 0.0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (x[i] - meanX) * (y[i] - meanY);
+            }
+            return sum / (n - 1);
+        }
         #endregion
 
     }
